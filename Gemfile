@@ -23,6 +23,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
 
+gem 'thin'
+
 
 gem 'mongoid'
 gem 'bson_ext'
