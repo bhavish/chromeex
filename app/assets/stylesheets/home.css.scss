@@ -29,6 +29,7 @@ body {
 	filter:alpha(opacity=70);
 	-moz-opacity:.70;
 	opacity:.70;
+	display:block;
 	
 }
 
@@ -73,4 +74,20 @@ footer.home{
 .links {
 	display:inline;
 	height:30px;
+}
+
+.homelink {
+	display: inline;
+	width : 200px;
+}
+.bloglink {
+	display: inline;
+	width : 200px;
+	
+}
+
+.melink{
+	display: inline;
+	width : 200px;
+	
 }
