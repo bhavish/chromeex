@@ -8,7 +8,18 @@ body {
 	padding: 0;
 
 }
-
+.nivoSlider {
+    position:relative;
+    width:960px; /* Change this to your images width */
+    height:400px; /* Change this to your images height */
+    background:url(loading.gif) no-repeat 50% 50%;
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
 .container {
 	width: 960px;
 	margin: 0 auto 0 auto;

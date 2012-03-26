@@ -6,9 +6,14 @@
 		<div class = "melink"> About Mezz </div>
 	</div>
 </header>
-	<section id= "scoller" class="scroller">
-		
-	</section>
+		<div id="slider" class="nivoSlider">
+		    <img src="/assets/nemo.jpg"/>
+			<img src="/assets/up.jpg"/>
+		    <img src="/assets/walle.jpg"/>
+			<img src="/assets/toystory.jpg"/>
+		</div>
+			
+	
 	<div class =" sidebyside">
 		<section id= "myblog" class ="bloglist">
 			<div class="blogdata">This is the news feed from what i do  :)</div>
@@ -19,3 +24,12 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+$(window).load(function() {
+    $('#slider').nivoSlider({
+	effect: 'fade',
+	directionNav: false,
+	controlNav: false	
+});
+});
+</script>
