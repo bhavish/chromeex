@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+header , body , footer {
+	display:block;
+	float:left;
+}
 body {
 	background:#ffffff url(triangles.png);
 	margin: 0;
@@ -22,8 +26,9 @@ body {
 }
 .container {
 	width: 960px;
-	margin: 0 auto 0 auto;
-	text-align: left;
+	margin: 0 120px 0 100px;
+
+	display:block;
 }
 
 .sidebyside{
@@ -35,78 +40,10 @@ body {
 	height:400px;
 	repeat:x;
 }
-.bloglist {
-	width:450px;
-	height:400px;
-	float:left;
-	margin-right:20px;
-	margin-top:20px;
-	background: #f5eaea;
-	filter:alpha(opacity=70);
-	-moz-opacity:.70;
-	opacity:.70;
+.mainimage{
+	width:900px;
+	height:600px;
+	margin: auto;
 	display:block;
-	
-}
-
-.scroller{
-	background: black;
-	filter:alpha(opacity=30);
-	-moz-opacity:.30;
-	opacity:.30;
-	width:960px;
-	height:400px;
-}
-
-.onebelowtheother{
-	width:450px;
-	height:400px;
-	float:right;
-	margin:20px;
-	position:block;
-}
-
-.twittersec{
-	width:450px;
-	height:200px;
-	background: #f5eaea;
-	filter:alpha(opacity=70);
-	-moz-opacity:.70;
-	opacity:.70;
-
-}
-
-footer.home{
-	width:450px;
-	height:200px;
-	background: blue;
-	filter:alpha(opacity=30);
-	-moz-opacity:.30;
-	opacity:.30;
-	margin: 10px 0 0 0;
-	
-}
-
-header.listing {
-	display:inline;
-	height:30px;
-	width:100%;
-	background:-webkit-gradient(radial, 165 0, 0, 220 -257, 465, from(#FC0000), to(#4F2828));
-	position:fixed;
-}
-
-.homelink {
-	display: inline;
-	width : 200px;
-}
-.bloglink {
-	display: inline;
-	width : 200px;
-	
-}
-
-.melink{
-	display: inline;
-	width : 200px;
-	
+	border:5px solid black;
 }
