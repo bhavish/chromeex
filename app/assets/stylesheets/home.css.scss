@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background:#ffffff url(furley_bg.png);
+	background:#ffffff url(triangles.png);
 	margin: 0;
 	padding: 0;
 
@@ -29,6 +29,11 @@ body {
 .sidebyside{
 	float:left;
 	position:relative;
+}
+.sliderimage {
+	width:960px;
+	height:400px;
+	repeat:x;
 }
 .bloglist {
 	width:450px;
@@ -82,9 +87,12 @@ footer.home{
 	
 }
 
-.links {
+header.listing {
 	display:inline;
 	height:30px;
+	width:100%;
+	background:-webkit-gradient(radial, 165 0, 0, 220 -257, 465, from(#FC0000), to(#4F2828));
+	position:fixed;
 }
 
 .homelink {
