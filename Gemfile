@@ -28,9 +28,9 @@ gem 'thin'
 gem 'mongoid'
 gem 'bson_ext'
 
-gem 'mongoid-paperclip'
+gem 'mongoid-paperclip', :require => "mongoid_paperclip"
 gem 'jquery-rails'
-gem "aws-s3"
+gem "aws-s3" , :require => "aws/s3"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
