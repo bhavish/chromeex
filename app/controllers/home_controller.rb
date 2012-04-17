@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   def uploadphoto
     @photo = Photo.new(params[:image])
     if @photo.save
-      render text: @photo.image.url(:medium)
+      render json: @photo
     end
   end
   
