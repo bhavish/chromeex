@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   protect_from_forgery :except => [:uploadphoto]
-  respond_to :json
+  respond_to :json , :js
   #  Index and home landing page of the user.
   def index
     
@@ -9,11 +9,7 @@ class HomeController < ApplicationController
   def uploadphoto
     @photo = Photo.new(params[:image])
     if @photo.save
-      respond_to do |format|
-        format.js 
-      end
-    else
-      
+      render text: "ok"
     end
   end
   
