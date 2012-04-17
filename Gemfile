@@ -32,6 +32,7 @@ gem 'mongoid-paperclip', :require => "mongoid_paperclip"
 gem 'jquery-rails'
 gem "aws-s3" , :require => "aws/s3"
 
+gem 'aws-sdk'
 gem 'pusher'
 
 
