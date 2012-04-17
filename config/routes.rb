@@ -5,6 +5,8 @@ Chromextension::Application.routes.draw do
   resources :home
   match '/dashboard' => "home#index", :as => :user_root
   
+  
+  
   match '/uploadphoto' , to: "home#uploadphoto"
   match '/downloadphoto', to: "home#downloadphoto"
   

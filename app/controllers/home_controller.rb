@@ -7,17 +7,13 @@ class HomeController < ApplicationController
   end
   
   def uploadphoto
-    @photo = Photo.new(params[:photo])
+    @photo = Photo.new(params[:image])
     if @photo.save
-      @photo.status = "ok"
       respond_to do |format|
-        format.json {render json: @photo}
+        format.js 
       end
     else
-      @photo.status = "error"
-      respond_to do |format|
-        format.json {render json: @photo}
-      end
+      
     end
   end
   
