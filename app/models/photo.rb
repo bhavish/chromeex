@@ -5,7 +5,7 @@ class Photo
   include Mongoid::Timestamps
   
   field :status
-  has_mongoid_attached_file :image,
+  has_mongoid_attached_file :file,
     :styles => {
             :medium => ["500x320>",:jpeg]
     },
