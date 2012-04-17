@@ -7,7 +7,7 @@ class Photo
   field :status
   has_mongoid_attached_file :image,
     :styles => {
-            :medium => "500x320>"
+            :medium => ["500x320>",:jpeg]
     },
     # Amazon S3
     :storage => :s3,
