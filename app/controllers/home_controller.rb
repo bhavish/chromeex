@@ -35,6 +35,7 @@ class HomeController < ApplicationController
     render nil
   end
   
-  def 
+  def slideshow 
+  end
   
 end
