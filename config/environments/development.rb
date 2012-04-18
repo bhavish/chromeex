@@ -1,3 +1,5 @@
+require 'pusher'
+
 Chromextension::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
@@ -27,4 +29,7 @@ Chromextension::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  Pusher.app_id = '18759'
+  Pusher.key    = 'd23d9b330dada0e8953b'
+  Pusher.secret = 'a0240e633bd1d5e4dbed'
 end

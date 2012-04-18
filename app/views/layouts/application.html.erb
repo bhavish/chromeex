@@ -5,6 +5,12 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+	<script src="http://js.pusher.com/1.11/pusher.min.js"></script>	
+	<script type="text/javascript">
+		var pusher = new Pusher('<%= Pusher.key %>'); 
+	</script>
+	<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+	<script src="http://vjs.zencdn.net/c/video.js"></script>
 </head>
 <body>
 <p class="notice"><%= notice %></p>

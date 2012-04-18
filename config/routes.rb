@@ -1,15 +1,11 @@
 Chromextension::Application.routes.draw do
-  
-
   devise_for :users
   resources :home
-  match '/dashboard' => "home#index", :as => :user_root
-  
-  
-  
+  match '/dashboard' => "home#project", :as => :user_root
   match '/uploadphoto' , to: "home#uploadphoto"
   match '/downloadphoto', to: "home#downloadphoto"
-  
-  root :to => 'home#index'
-  
+  match '/playvideo', to: "home#playvideo"
+  match '/videocontrol', to: "home#videocontrol"
+  match '/slideshow', to: "home#slideshow"
+  root :to => 'home#project'
 end
