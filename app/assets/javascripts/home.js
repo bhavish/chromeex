@@ -56,6 +56,16 @@ $(function(){
 					$("#previous").click();
 				}
 			});
+			
+			
+			channel.bind('show-c',function(data){
+				console.log("Download is called");
+				console.log(data);
+				$("#slideshow").hide();
+				$("#upload-image-show").fadeIn(1000);
+				$("#upload-image-show").prepend("<img class ='download-image' src='"+data.photourl+"' />");
+				
+			});
 	});
 	pusher.connection.bind('disconnected' , function(){
 		var date = new Date;

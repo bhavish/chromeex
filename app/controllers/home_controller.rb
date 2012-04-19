@@ -17,12 +17,23 @@ class HomeController < ApplicationController
   end
   
   def downloadphoto
-    @photo = Photo.all.descending(:created_at).first
-    respond_to do |format|
-      format.json {render json: @photo}
-    end
+    photo = Photo.all.descending(:created_at).first
+    Pusher['photo-call'].trigger('show-c', {
+      photourl: photo.file.url
+    })
+    render text: "ok"
+    
   end
   
+  
+  def uploadcphoto
+    photo = Photo.new
+    photo.fromc = true
+    photo.file = params[:file]
+    if photo.save
+      render json: photo
+    end
+  end
   
   def project    
     # this was for the projet page.
