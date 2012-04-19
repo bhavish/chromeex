@@ -25,17 +25,28 @@ class HomeController < ApplicationController
   
   
   def project    
+    # this was for the projet page.
   end
   
   def playvideo
-    render nil
+    Pusher['photo-call'].trigger('play-video' , {
+      control: "1"
+    })
+    render text: "ok"
   end
   
   def videocontrol
-    render nil
+    Pusher['photo-call'].trigger('controller' , {
+      forward: params[:forward]
+    })
+    render text: "ok"
   end
   
   def slideshow 
+    Pusher['photo-call'].trigger('slideshow', {
+      control: params[:value]
+    })
+    render text: "ok"
   end
   
 end
