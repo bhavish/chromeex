@@ -1,0 +1,103 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+header , body , footer {
+	display:block;
+	float:left;
+}
+body {
+	background:#ffffff url(cremebackground.png);
+}
+.nivoSlider {
+    position:relative;
+    width:960px; /* Change this to your images width */
+    height:400px; /* Change this to your images height */
+    background:url(loading.gif) no-repeat 50% 50%;
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.container {
+	width: 960px;
+	margin: 0 120px 0 100px;
+
+	display:block;
+}
+
+.sidebyside{
+	float:left;
+	position:relative;
+}
+.sliderimage {
+	width:960px;
+	height:400px;
+	repeat:x;
+}
+
+header.block{
+	display:block;
+	margin-bottom:10px;
+	margin-top:10px;
+}
+
+.headerlogo {
+	width:300px;
+	height:70px;
+	display:inline;
+	padding:0 40px 0 20px;
+	float:left;
+}
+
+p.headerlink {
+	font-family:"Lucida console";
+	color: #9b9494;
+	font-size:1.2em;	
+	margin:10px;
+}
+div.completelink{
+	display:inline;
+	float:right;
+}
+
+p.about {
+	text-align:center;
+	font-family:"Lucida console";
+	font-size:.9em;
+}
+
+.alllinks{
+	display:inline;
+}
+
+a:link,a:visited,a:hover, a:active {
+	text-decoration:none;	
+}
+
+div.bodysection{
+	padding:30px;
+	margin:10px;
+	.shoutout {
+		width:300px;
+		float:left;
+		margin:10px;
+		text-align:center;
+	}
+	
+	.servicelisting {
+		width:300px;
+		float:left;
+		margin:10px;
+		text-align:center;
+	}
+	.contactme {
+		width:200px;
+		float:left;
+		margin:10px;
+		text-align:center;
+	}
+}
+
