@@ -43,8 +43,9 @@ class HomeController < ApplicationController
   end
   
   def slideshow 
+    Rails.logger.debug params[:forward]
     Pusher['photo-call'].trigger('slideshow', {
-      control: params[:value]
+      forward: params[:forward]
     })
     render text: "ok"
   end
