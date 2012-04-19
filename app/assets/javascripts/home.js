@@ -9,6 +9,7 @@ $(function(){
 			channel.bind("show", function(data){
 				console.log("Show-photo is called");
 				console.log(data);
+				$("#slideshow").fadeOut(1000);
 				$("#upload-image-show").prepend("<img class ='download-image' src='"+data.photourl+"' />");
 			});
 			channel.bind("play-video",function(data){
