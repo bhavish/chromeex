@@ -30,7 +30,7 @@ $(function(){
 					if (data.forward == 1){
 					myplayer.currentTime(cur+5);
 					}else if (data.forward == 0){
-					if (cur > 5){
+					if (cur > 5){	
 					myplayer.currentTime(cur-5);
 					}else {
 					myplayer.currentTime(0);
@@ -59,7 +59,7 @@ $(function(){
 	});
 	
 	var stopplayer = function(){
-	      var myPlayer = this;
+	      var myplayer = this;
 	      playeractive = false;
 	    };
 	 myPlayer.addEvent("ended", stopplayer);
