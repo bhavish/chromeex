@@ -10,6 +10,7 @@ $(function(){
 				console.log("Show-photo is called");
 				console.log(data);
 				$("#slideshow").fadeOut(1000);
+				$("#upload-image-show").fadeIn(1000);
 				$("#upload-image-show").prepend("<img class ='download-image' src='"+data.photourl+"' />");
 			});
 			channel.bind("play-video",function(data){
@@ -17,6 +18,7 @@ $(function(){
 				// play the video here .. in fullscreen mode.
 				console.log(data);
 				$("#upload-image-show").slideUp(1000);
+				$("#slideshow").hide();
 				$("#video-section").fadeIn(1000);	
 				myplayer.size(1000,1000);
 				myplayer.play();				
@@ -44,9 +46,10 @@ $(function(){
 			});
 			
 			channel.bind('slideshow',function(data){
+				$("#slideshow").show();
+				$("#video-section").hide();
+				$("#upload-image-show").hide();
 				console.log("The slideshow Called");
-				console.log(data);
-				console.log(data.forward);
 				if (data.forward == 1 ){
 					$("#next").click();
 				}else if (data.forward ==0){
