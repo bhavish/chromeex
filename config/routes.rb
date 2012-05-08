@@ -8,6 +8,6 @@ Chromextension::Application.routes.draw do
   match '/videocontrol', to: "home#videocontrol"
   match '/slideshow', to: "home#slideshow"
   match '/uploadcphoto' , to: "home#uploadcphoto"
-  match '/downloadphotoaction', to: "home#downloadphotoactio"
+  match '/downloadphotoaction', to: "home#downloadphotoaction"
   root :to => 'home#project'
 end
