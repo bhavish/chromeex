@@ -61,4 +61,14 @@ class HomeController < ApplicationController
     render text: "ok"
   end
   
+  
+  def downloadphotoaction
+    photo = Photo.all.descending(:created_at).first
+    Pusher['photo-call'].trigger('show-c', {
+      photourl: photo.file.url
+    })
+    render text: "ok"
+    
+  end
+  
 end
