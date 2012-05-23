@@ -2,102 +2,143 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-header , body , footer {
-	display:block;
-	float:left;
-}
-body {
-	background:#ffffff url(cremebackground.png);
-}
-.nivoSlider {
-    position:relative;
-    width:960px; /* Change this to your images width */
-    height:400px; /* Change this to your images height */
-    background:url(loading.gif) no-repeat 50% 50%;
-}
-.nivoSlider img {
-    position:absolute;
-    top:0px;
-    left:0px;
-    display:none;
-}
-.container {
-	width: 960px;
-	margin: 0 120px 0 100px;
 
-	display:block;
+
+
+
+
+
+
+
+
+.image-class {
+	display:inline;
+	width:auto;
+	margin:50px;
 }
 
-.sidebyside{
-	float:left;
-	position:relative;
-}
-.sliderimage {
-	width:960px;
+.download-image{
+	width:400px;
 	height:400px;
-	repeat:x;
-}
-
-header.block{
-	display:block;
-	margin-bottom:10px;
-	margin-top:10px;
-}
-
-.headerlogo {
-	width:300px;
-	height:70px;
-	display:inline;
-	padding:0 40px 0 20px;
 	float:left;
-}
-
-p.headerlink {
-	font-family:"Lucida console";
-	color: #9b9494;
-	font-size:1.2em;	
-	margin:10px;
-}
-div.completelink{
-	display:inline;
-	float:right;
-}
-
-p.about {
-	text-align:center;
-	font-family:"Lucida console";
-	font-size:.9em;
-}
-
-.alllinks{
-	display:inline;
-}
-
-a:link,a:visited,a:hover, a:active {
-	text-decoration:none;	
-}
-
-div.bodysection{
-	padding:30px;
-	margin:10px;
-	.shoutout {
-		width:300px;
-		float:left;
-		margin:10px;
-		text-align:center;
-	}
+	padding:10px;
+	border-color:#fff;
+	border-width:1px;
 	
-	.servicelisting {
-		width:300px;
-		float:left;
-		margin:10px;
-		text-align:center;
-	}
-	.contactme {
-		width:200px;
-		float:left;
-		margin:10px;
-		text-align:center;
-	}
+}
+
+.video-class {
+	display:none;
+	margin:auto;
+	align:center;
+}
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	color:#eee;
+	background:url('bg.jpg') repeat-x #0c0d10;
+	font:13px "Lucida Sans Unicode",Arial,Helvetica,sans-serif;
+}
+
+#slideshow{
+	height:800px;
+	margin:20px auto 0;
+	position:relative;
+	width:1000px;	
+	-moz-box-shadow:0 0 22px #111;
+	-webkit-box-shadow:0 0 22px #111;
+	box-shadow:0 0 22px #111;
+}
+
+#slideshow ul{
+	height:800px;
+	left:10px;
+	list-style:none outside none;
+	overflow:hidden;
+	position:absolute;
+	top:10px;
+	width:1000px;
+}
+
+#slideshow li{
+	position:absolute;
+	display:none;
+	z-index:10;
+}
+
+#slideshow li:first-child{
+	display:block;
+	z-index:1000;
+}
+
+#slideshow .slideActive{
+	z-index:1000;
+}
+
+#slideshow canvas{
+	display:none;
+	position:absolute;
+	z-index:100;
+}
+
+#slideshow .arrow{
+	height:86px;
+	width:60px;
+	position:absolute;
+	background:url('arrows.png') no-repeat;
+	top:50%;
+	margin-top:-43px;
+	cursor:pointer;
+	z-index:5000;
+}
+
+#slideshow .previous{ background-position:left top;left:0;}
+#slideshow .previous:hover{ background-position:left bottom;}
+
+#slideshow .next{ background-position:right top;right:0;}
+#slideshow .next:hover{ background-position:right bottom;}
+
+
+/* The following styles are only used for the styling of the demo page */
+
+p.tzine{
+	text-align:center;
+	font-size:12px;
+	margin:50px;
+}
+
+p.credit{
+	text-align:center;
+	color:#888;
+	font-size:10px;
+}
+
+p.credit a,
+p.credit a:visited{
+	color:#ccc;
+	border-bottom-color:#aaa;
+}
+
+p.credit a:hover{
+	border-bottom-color:transparent;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	border-bottom:1px dotted #97cae6;
+	color:#97cae6;
+}
+
+a:hover{
+	border-bottom:1px dashed transparent;
+}
+
+.clear{
+	clear:both;
 }
 

@@ -9,5 +9,5 @@ Chromextension::Application.routes.draw do
   match '/slideshow', to: "home#slideshow"
   match '/uploadcphoto' , to: "home#uploadcphoto"
   match '/downloadphotoaction', to: "home#downloadphotoaction"
-  root :to => 'home#project'
+  root :to => 'home#savethylife'
 end

@@ -1,7 +1,6 @@
 class HomeController < ApplicationController
   protect_from_forgery :except => [:uploadphoto]
   respond_to :json , :js
-  #  Index and home landing page of the user.
   def index 
   end
   
@@ -61,13 +60,17 @@ class HomeController < ApplicationController
     render text: "ok"
   end
   
-  
   def downloadphotoaction
     photo = Photo.all.descending(:created_at).first
     Pusher['photo-call'].trigger('show-c', {
       photourl: photo.file.url
     })
     render text: "ok"
+    
+  end
+  
+  
+  def savethylife
     
   end
   
