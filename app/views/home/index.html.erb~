@@ -4,11 +4,6 @@
 		<div class ="bloglink"> Blog</div>
 		<div class = "melink"> About Me </div>
 </header>
-		<div id="slider" class="nivoSlider">
-			<img class ="sliderimage" src="/assets/calvin.jpg"/>
-		    <img class ="sliderimage"src="/assets/keyboard.jpg"/>
-		</div>
-			
 	
 	<div class =" sidebyside">
 		<section id= "myblog" class ="bloglist">
