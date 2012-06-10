@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   protect_from_forgery :except => [:uploadphoto]
   respond_to :json , :js
+  
+  
   def index 
   end
   
