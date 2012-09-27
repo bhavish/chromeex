@@ -34,6 +34,7 @@ gem "aws-s3" , :require => "aws/s3"
 
 gem 'aws-sdk'
 gem 'pusher'
+gem "twitter-bootstrap-rails"
 
 
 # To use ActiveModel has_secure_password
