@@ -27,18 +27,18 @@
 }
 
 *{
-	background-color:black;
 	margin:0;
 	padding:0;
 }
 
 body{
 	color:#eee;
+	background:black url("/assets/backgroundgrey.jpg");
 	font:13px "Lucida Sans Unicode",Arial,Helvetica,sans-serif;
 }
 
 #slideshow{
-	height:800px;
+	height:700px;
 	margin:20px auto 0;
 	position:relative;
 	width:1000px;	

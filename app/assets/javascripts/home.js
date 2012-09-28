@@ -11,13 +11,14 @@ $(function(){
 				console.log(data);
 				$("#slideshow").fadeOut(1000);
 				$("#upload-image-show").fadeIn(1000);
+				$("#video-section").hide();
 				$("#upload-image-show").prepend("<img class ='download-image' src='"+data.photourl+"' />");
 			});
 			
 			channel.bind("url-show" , function(data){
 				console.log("url recieved");
 				console.log(data);
-				if(data.weburl == ""){
+				if(data.weburl == null){
 					data.weburl = "www.yahoo.com";
 				}
 				window.open(data.weburl);
