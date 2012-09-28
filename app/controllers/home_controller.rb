@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   
   
   def index 
+    
   end
   
   def uploadphoto
@@ -26,6 +27,25 @@ class HomeController < ApplicationController
     
   end
   
+  
+  def uploadurl
+    paramurl = params[:url]
+    #clean the url 
+    url = Url.new
+    url.website_url = paramurl
+    
+    if url.save
+      render json: url
+    end    
+  end
+
+  def downloadurl
+    url = Url.all.descending(:created_at).first
+    Pusher['photo-call'].trigger('url-show', {
+      weburl: url.website_url
+    })
+    render text: "ok"
+  end
   
   def uploadcphoto
     photo = Photo.new

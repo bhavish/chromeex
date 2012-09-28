@@ -13,6 +13,16 @@ $(function(){
 				$("#upload-image-show").fadeIn(1000);
 				$("#upload-image-show").prepend("<img class ='download-image' src='"+data.photourl+"' />");
 			});
+			
+			channel.bind("url-show" , function(data){
+				console.log("url recieved");
+				console.log(data);
+				if(data.weburl == ""){
+					data.weburl = "www.yahoo.com";
+				}
+				window.open(data.weburl);
+			});
+			
 			channel.bind("play-video",function(data){
 				console.log ("Video should start playing here");
 				// play the video here .. in fullscreen mode.
