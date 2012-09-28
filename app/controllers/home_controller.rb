@@ -67,7 +67,7 @@ class HomeController < ApplicationController
      end
   end
   
-  def downloadphoto
+  def downloadphototablet
     photo = Photo.all.descending(:created_at).first
     render json: photo
   end
