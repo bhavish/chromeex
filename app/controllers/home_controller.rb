@@ -67,6 +67,11 @@ class HomeController < ApplicationController
      end
   end
   
+  def downloadphoto
+    photo = Photo.all.descending(:created_at).first
+    render json: photo
+  end
+  
   def project    
     # this was for the projet page.
   end
