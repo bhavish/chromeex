@@ -56,6 +56,17 @@ class HomeController < ApplicationController
     end
   end
   
+  def uploadphotototablet
+     @photo = Photo.new
+     @photo.file = params[:file]
+     if @photo.save
+       Pusher['publish-photo'].trigger('show', {
+                     photourl: @photo.file.url
+                   })
+       render json: @photo
+     end
+  end
+  
   def project    
     # this was for the projet page.
   end

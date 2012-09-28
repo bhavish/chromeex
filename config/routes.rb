@@ -11,5 +11,6 @@ Chromextension::Application.routes.draw do
   match '/downloadphotoaction', to: "home#downloadphotoaction"
   match '/uploadurl', to: "home#uploadurl"
   match '/downloadurl', to: "home#downloadurl"
+  match '/uploadphotototablet', to: "home#uploadphotototablet"
   root :to => 'home#index'
 end
