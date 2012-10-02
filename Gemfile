@@ -17,14 +17,9 @@ end
 
 
 gem 'devise'
-
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
-
-
 gem 'thin'
-
-
 gem 'mongoid'
 gem 'bson_ext'
 
@@ -34,8 +29,6 @@ gem "aws-s3" , :require => "aws/s3"
 
 gem 'aws-sdk'
 gem 'pusher'
-gem "twitter-bootstrap-rails"
-
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
