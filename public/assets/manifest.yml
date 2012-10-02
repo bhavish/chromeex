@@ -50,10 +50,13 @@ button2_right.gif: button2_right.gif
 calvin.jpg: calvin.jpg
 companylogo2.gif: companylogo2.gif
 cremebackground.png: cremebackground.png
+darkdenim.png: darkdenim.png
 denim.png: denim.png
 dev7logo.png: dev7logo.png
 footer_logo.gif: footer_logo.gif
 furley_bg.png: furley_bg.png
+glyphicons-halflings-white.png: glyphicons-halflings-white.png
+glyphicons-halflings.png: glyphicons-halflings.png
 header.gif: header.gif
 icon1.jpg: icon1.jpg
 icon2.jpg: icon2.jpg
@@ -92,6 +95,7 @@ menu5_active.gif: menu5_active.gif
 menu_border.gif: menu_border.gif
 mylogo.png: mylogo.png
 nemo.jpg: nemo.jpg
+progressbar.gif: progressbar.gif
 rails.png: rails.png
 search.jpg: search.jpg
 sign_up.gif: sign_up.gif
@@ -108,4 +112,3 @@ walle.jpg: walle.jpg
 zigzag.png: zigzag.png
 application.js: application.js
 application.css: application.css
-home.css.scss1: home.css.scss1
