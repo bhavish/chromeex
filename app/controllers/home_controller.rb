@@ -69,7 +69,10 @@ class HomeController < ApplicationController
   
   def downloadphototablet
     photo = Photo.all.descending(:created_at).first
-    render json: photo
+    url = photo.file.url
+    jsonurl = {'url' => url }.to_json
+    Rails.logger.debug { jsonurl }
+    render json: jsonurl
   end
   
   def project    
