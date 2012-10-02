@@ -22,7 +22,7 @@ gem 'omniauth-twitter'
 gem 'thin'
 gem 'mongoid'
 gem 'bson_ext'
-
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'mongoid-paperclip', :require => "mongoid_paperclip"
 gem 'jquery-rails'
 gem "aws-s3" , :require => "aws/s3"
