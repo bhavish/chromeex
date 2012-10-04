@@ -3,12 +3,13 @@
 <head>
   <title>Savethylife</title>
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 	<script src="http://js.pusher.com/1.11/pusher.min.js"></script>	
 	<script type="text/javascript">
+	
 		var pusher = new Pusher('<%= Pusher.key %>'); 
 	</script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 	<link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
 	<script src="http://vjs.zencdn.net/c/video.js"></script>
 </head>
@@ -16,4 +17,5 @@
 <%= yield %>
 
 </body>
+<%= javascript_include_tag "application" %>  
 </html>
