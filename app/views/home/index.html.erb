@@ -16,9 +16,10 @@ $(function(){
         ythandle.playVideo();
       });
 
-      channel.bind("add-video-to-queue", function(data){
+      channel.bind("next-video", function(data){
         // now  add the video to the queue
-
+        console.log("nextvideo")
+        ythandle.nextVideo();
       });
 
       channel.bind("pause-video", function(){
@@ -27,7 +28,9 @@ $(function(){
         ythandle.pauseVideo();
       });
 
-      channel.bind("play-next-video-in-queue", function(data){
+      channel.bind("previous-video", function(data){
+        console.log("previous video")
+      
 
       })
 
@@ -68,7 +71,8 @@ $(function(){
       common.init();
     /* You can perform a lot of functions here*/
     ythandle=document.getElementById('player-container');
-    ythandle.loadVideoById("fwK7ggA3-bU");
+    // ythandle.loadVideoById("fwK7ggA3-bU");
+    ythandle.loadPlaylist('DCAE41611AFA0993',1);
     }
     /**
     *

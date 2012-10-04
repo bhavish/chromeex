@@ -27,11 +27,18 @@ class HomeController < ApplicationController
  
  #call  pusher to play the previous video in the list
  def backwardvideo
-  
+  Pusher['photo-call'].trigger('previous-video' , {
+      control: "1"
+    })
+    render text: "ok"
  end
  
  #call pusher to play the next video in the list
  def forwardvideo
+  Pusher['photo-call'].trigger('next-video' , {
+      control: "1"
+    })
+    render text: "ok"
  end
   
 
