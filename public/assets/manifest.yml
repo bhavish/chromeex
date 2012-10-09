@@ -3,15 +3,6 @@ AboutButton.gif: AboutButton.gif
 AboutButton.jpg: AboutButton.jpg
 Basketball.gif: Basketball.gif
 Buttons.psd: Buttons.psd
-Gesture/Slide1.jpg: Gesture/Slide1.jpg
-Gesture/Slide2.jpg: Gesture/Slide2.jpg
-Gesture/Slide3.jpg: Gesture/Slide3.jpg
-Gesture/Slide4.jpg: Gesture/Slide4.jpg
-Gesture/Slide5.jpg: Gesture/Slide5.jpg
-Gesture/Slide6.jpg: Gesture/Slide6.jpg
-Gesture/Slide7.jpg: Gesture/Slide7.jpg
-Gesture/Slide8.jpg: Gesture/Slide8.jpg
-Gesture/Slide9.jpg: Gesture/Slide9.jpg
 Header.psd: Header.psd
 HomeButton.gif: HomeButton.gif
 MainBackground.gif: MainBackground.gif
@@ -112,3 +103,9 @@ walle.jpg: walle.jpg
 zigzag.png: zigzag.png
 application.js: application.js
 application.css: application.css
+fontawesome-webfont.eot: fontawesome-webfont.eot
+fontawesome-webfont.svg: fontawesome-webfont.svg
+fontawesome-webfont.ttf: fontawesome-webfont.ttf
+fontawesome-webfont.woff: fontawesome-webfont.woff
+twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white.png
+twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings.png
