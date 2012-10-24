@@ -11,8 +11,11 @@ class HomeController < ApplicationController
  
     #play the given video that is currently being played
   def playvideo
+    if(params.has_key?(:id))
+      id = params[:id]
+    end
     Pusher['photo-call'].trigger('play-video' , {
-      control: "1"
+      control: "1", video_id: id
     })
     render text: "ok"
   end
@@ -44,6 +47,11 @@ class HomeController < ApplicationController
 
   #add the given video url to the queue or based on the ID
 def addvideotoqueue
+  id = params[:id];
+  Pusher['photo-call'].trigger('queue-video',{
+    video_id: id
+    })
+  render text: "ok"
 end
 
 end

@@ -13,7 +13,11 @@ $(function(){
         // play the video here .. in fullscreen mode.
         // youtubeapi.play
         console.log(data);
-        ythandle.playVideo();
+        if(data.video_id == null){
+          ythandle.playVideo();
+        }else {
+          ythandle.loadVideoById(data.video_id);
+        }
       });
 
       channel.bind("next-video", function(data){
@@ -29,10 +33,16 @@ $(function(){
       });
 
       channel.bind("previous-video", function(data){
-        console.log("previous video")
-      
+        console.log("previous video");
+        ythandle.previousVideo();
+      });
 
-      })
+      channel.bind("queue-video", function(data){
+        console.log("Add video to the queue");
+        console.log(data);
+        ythandle.cueVideoById(data.video_id);
+        ythandle.playVideo();
+      });
 
   // Functions to pause the video, add a video to the url should be done from here.       
   });
@@ -71,8 +81,8 @@ $(function(){
       common.init();
     /* You can perform a lot of functions here*/
     ythandle=document.getElementById('player-container');
-    // ythandle.loadVideoById("fwK7ggA3-bU");
-    ythandle.loadPlaylist('DCAE41611AFA0993',1);
+    ythandle.loadVideoById("fwK7ggA3-bU");
+    //ythandle.loadPlaylist('DCAE41611AFA0993',1);
     }
     /**
     *
