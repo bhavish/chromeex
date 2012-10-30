@@ -1,0 +1,121 @@
+  <script type="text/javascript">
+$(function(){
+  // this will take care of all the pusher and other activities that take place on the screen.
+  
+  console.log(ythandle);
+  pusher.connection.bind('connected', function(){
+      var date = new Date;
+      console.log (" Connected at " + date);
+      var channel = pusher.subscribe('photo-call'); 
+      
+      channel.bind("play-video",function(data){
+        console.log ("Play Video called");
+        // play the video here .. in fullscreen mode.
+        // youtubeapi.play
+        console.log(data);
+        if(data.video_id == null){
+          ythandle.playVideo();
+        }else {
+          ythandle.loadVideoById(data.video_id);
+        }
+      });
+
+      channel.bind("next-video", function(data){
+        // now  add the video to the queue
+        console.log("nextvideo")
+        ythandle.nextVideo();
+      });
+
+      channel.bind("pause-video", function(){
+        // pause the current video that is being played
+        console.log("Pause video called");
+        ythandle.pauseVideo();
+      });
+
+      channel.bind("previous-video", function(data){
+        console.log("previous video");
+        ythandle.previousVideo();
+      });
+
+      channel.bind("queue-video", function(data){
+        console.log("Add video to the queue");
+        console.log(data);
+        ythandle.cueVideoById(data.video_id);
+        ythandle.playVideo();
+      });
+
+  // Functions to pause the video, add a video to the url should be done from here.       
+  });
+
+
+  pusher.connection.bind('disconnected' , function(){
+    var date = new Date;
+    console.log ("Disconnected at : " + date);
+  });
+  
+});
+</script>
+
+<header class = "header">
+</header>
+
+<div class = "container">
+  <img src = "/assets/qrcode.png">
+  <object type="application/x-shockwave-flash" data="http://www.youtube.com/apiplayer?enablejsapi=1&amp;version=3&amp;playerapiid=ythandle" width="970" height="500" id="player-container" style="visibility: visible; "><param name="allowScriptAccess" value="always"></object>
+  <div id="console">
+    <button id="play">Play</button>
+    <button id="pause">pause</button>
+    <button id="stop">Stop</button>
+  </div>
+  <script type="text/javascript">
+    var params={allowScriptAccess:'always'};
+    var atts={};
+    swfobject.embedSWF("http://www.youtube.com/apiplayer?enablejsapi=1&version=3&playerapiid=ythandle", "player-container", "970", "800", "8", null, null, params, atts);
+    /**
+    *@param: playerId - handle to the video player eg. ythandle
+    *@description: executed when the youtube player is ready.
+    */
+    var ythandle = null;
+
+    function onYouTubePlayerReady(){
+      console.log('initiated!');
+      common.init();
+    /* You can perform a lot of functions here*/
+    ythandle=document.getElementById('player-container');
+    ythandle.loadVideoById("fwK7ggA3-bU");
+    //ythandle.loadPlaylist('DCAE41611AFA0993',1);
+    }
+    /**
+    *
+    */
+    var common=function(){
+    var i=0;
+    return{
+      init:function(){
+        document.getElementById('play').addEventListener('click',common.play,false);
+        document.getElementById('pause').addEventListener('click',common.pause,false);
+        document.getElementById('stop').addEventListener('click',common.stop,false);
+      },
+      /* Functions that are bound to the button clicks....you should hook your backend here*/
+      play:function(){
+        console.log('play pressed');
+        if(ythandle)
+          ythandle.playVideo();
+      },
+      pause:function(){
+        if(ythandle)
+          ythandle.pauseVideo();
+      },
+      stop:function(){
+        if(ythandle)
+          ythandle.stopVideo();     }
+      
+    }//return 
+    }();//common
+    
+  
+  </script>
+
+</div>
+
+<footer class = "footer"></footer>
